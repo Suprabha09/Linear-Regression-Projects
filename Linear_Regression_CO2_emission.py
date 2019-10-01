@@ -2,7 +2,12 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import pylab as pl
 import numpy as np
-!wget -O FuelConsumption.csv https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/ML0101ENv3/labs/FuelConsumptionCo2.csv
+
+import wget
+url     ='https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/ML0101ENv3/labs/FuelConsumptionCo2.csv'
+FuelConsumption.csv = wget.download(url)
+#>>> wget -O FuelConsumption.csv https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/ML0101ENv3/labs/FuelConsumptionCo2.csv
+
 
 df = pd.read_csv("FuelConsumption.csv")
 
